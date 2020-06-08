@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": " node server.js",
+    "seed": "node seeds/index.js"
   },
   "repository": {
     "type": "git",
@@ -13,13 +14,14 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/waveess/E-commerce-Back-End/issues"
   },
   "homepage": "https://github.com/waveess/E-commerce-Back-End#readme",
   "dependencies": {
     "dotenv": "^8.2.0",
+    "express": "^4.17.1",
     "mysql": "^2.18.1",
     "mysql2": "^2.1.0",
     "sequelize": "^5.21.12",
