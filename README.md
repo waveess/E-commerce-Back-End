@@ -2,10 +2,12 @@
 ## Table of Contents
  
  * [1. Description](#1-description)
- * [2. Usage](#1-usage)
- * [3. License](#2-license)
- * [4.Installation](#3installation)
- * [5. Contributing](#4-contributing)
+ * [2. Usage](#2-usage)
+ * [3. License](#3-license)
+ * [4.Installation](#4installation)
+ * [5. Questions](#5-questions)
+ * [6. Video Walk Through](#6- video walk through)
+ 
 
 ## 1. Description
 This project is the creation of the back end for an e-commerce site. This application used Express.js API and Sequelize to interact with a MySQL database.
@@ -18,12 +20,14 @@ This application will allow users to view, add, edit, and delete categories, pro
 MIT
 
 ##  4. Installation
-Rawan Fatima
+The user should clone the repository from GitHub. This application requires Node.js, Express.js, and Sequelize. To connect to the database run mysql -u root -p and enter password from .env file. Then source the schema.sql. To seed the file run npm run seed. Finally to connect to the server run npm start.
 
 ##  5. Questions
 
 If you have any questions, contact me at fatimarawan15@gmail.com or refer to my github repository: https://github.com/waveess/employee-tracker
 
+##  5. Video Walk Through
 
+coming soon!
 
 
