@@ -6,7 +6,7 @@
  * [3. License](#3-license)
  * [4.Installation](#4installation)
  * [5. Questions](#5-questions)
- * [1. Description](#1-description)
+ * [6. Video Walk Through](#1-description)
  
  
 ## 1. Description
