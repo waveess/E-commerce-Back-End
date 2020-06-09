@@ -28,6 +28,8 @@ If you have any questions, contact me at fatimarawan15@gmail.com or refer to my 
 
 ##  5. Video Walk Through
 
+1-mysql walkthrough:
+https://drive.google.com/file/d/1c1Q5t286GlTP3YCtpPvLrz1K0owXswRi/view
 coming soon!
 
 
