@@ -7,6 +7,10 @@
  * [4.Installation](#4installation)
  * [5. Questions](#5-questions)
  * [6. Video Walk Through](#6-vide-walk-through)
+ * [7. mySQL walk through](#7-mySQL)
+ * [8. npm Walk Through](#8-npm)
+ * [9. Insomnia Walk Through](#9-insomnia)
+ 
  
  
 ## 1. Description
@@ -26,13 +30,16 @@ The user should clone the repository from GitHub. This application requires Node
 
 If you have any questions, contact me at fatimarawan15@gmail.com or refer to my github repository: https://github.com/waveess/employee-tracker
 
-##  5. Video Walk Through
+##  6. Video Walk Through
 
-##  6. mySQL Walk Through
+##  7. mySQL Walk Through
 
 https://drive.google.com/file/d/1c1Q5t286GlTP3YCtpPvLrz1K0owXswRi/view
 
-##  7. NPM Walk Through
+##  8. NPM Walk Through
 https://drive.google.com/file/d/1feQqitS1HamN8fh2UxZpopajVhXmIN2q/view
+
+##  8. NPM Walk Through
+coming soon!
 
 
