@@ -39,7 +39,7 @@ https://drive.google.com/file/d/1c1Q5t286GlTP3YCtpPvLrz1K0owXswRi/view
 ##  8. NPM Walk Through
 https://drive.google.com/file/d/1feQqitS1HamN8fh2UxZpopajVhXmIN2q/view
 
-##  8. NPM Walk Through
+##  8. Insomnia Walk Through
 coming soon!
 
 
