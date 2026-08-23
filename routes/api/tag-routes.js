@@ -2,18 +2,17 @@ const router = require('express').Router();
 const { Tag, Product, ProductTag } = require('../../models');
 
 
-// get all products
+// get all tags
 router.get('/', (req, res) => {
-  // find all products
   Tag.findAll({
     include: [
       {
-        model: Tag,
-        attributes: ['id', 'tag_name'],
+        model: Product,
+        attributes: ['id', 'product_name', 'price', 'stock'],
         through: ProductTag,
-        as: 'products'
-      }
-    ]
+        as: 'products',
+      },
+    ],
   })
   .then(dbTagData => {
     res.json(dbTagData)
@@ -87,12 +86,17 @@ router.put('/:id', (req, res) => {
       }
     }
   )
-  .then(dbTagData => {
-    if(!dbTagData){
+  .then(([updatedRows]) => {
+    if (updatedRows === 0) {
       res.status(404).json({ message: "No tag information exists for this id" });
       return;
     }
-    res.json(dbTagData)
+    return Tag.findByPk(req.params.id);
+  })
+  .then((dbTagData) => {
+    if (dbTagData) {
+      res.json(dbTagData);
+    }
   })
   .catch(err => {
     console.log(err);

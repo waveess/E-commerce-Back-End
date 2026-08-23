@@ -1,5 +1,5 @@
-const router = requirer('express').Router();
-const {Category, Product } = require('../..models');
+const router = require('express').Router();
+const { Category, Product } = require('../../models');
 
 //api categories
 
@@ -74,12 +74,17 @@ router.put('/:id', (req, res) => {
             }
         }
     )
-    .then(dbCategory => {
-        if(!dbCategory) {
+    .then(([updatedRows]) => {
+        if (updatedRows === 0) {
             res.status(404).json({ message: "No Category found with this id"});
             return;
         }
-        res.json(dbCategory);
+        return Category.findByPk(req.params.id);
+    })
+    .then((dbCategory) => {
+        if (dbCategory) {
+            res.json(dbCategory);
+        }
     })
     .catch(err => {
         console.log(err);
