@@ -1,20 +1,24 @@
 const express = require('express');
+const cors = require('cors');
 const routes = require('./routes');
-// import sequelize connection
 const sequelize = require('./config/connection.js');
 
 const app = express();
 const PORT = process.env.PORT || 3001;
 
+// Allow the React frontend to communicate with the API
+app.use(cors());
+
+// Parse incoming JSON and URL-encoded data
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+// API routes
 app.use(routes);
 
-// sync sequelize models to the database, then turn on the server
-// app.listen(PORT, () => {
-//   console.log(`App listening on port ${PORT}!`);
-// });
-sequelize.sync({ force: false }).then(() => { //once you have the association in index.js file , change the force = true and start the server to drop and create the tables. Once thats done, change it back to false
-  app.listen(PORT, () => console.log(`App listening on port ${PORT}!`));
+// Sync Sequelize models to the database, then start server
+sequelize.sync({ force: false }).then(() => {
+  app.listen(PORT, () => {
+    console.log(`App listening on port ${PORT}!`);
+  });
 });

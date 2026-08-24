@@ -15,7 +15,7 @@ Product.init(
             autoIncrement: true
         },
 
-        Product_name: {
+        product_name: {
             type: DataTypes.STRING,
             allowNull: false,
 
@@ -30,7 +30,7 @@ Product.init(
         stock: {
             type: DataTypes.INTEGER,
             allowNull: false,
-            defaultValue: "10",
+            defaultValue: 10,
             validate: {
                 isNumeric: true
         }
@@ -53,4 +53,4 @@ Product.init(
 );
     
 
-module.exports = Category;
+module.exports = Product;
