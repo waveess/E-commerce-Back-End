@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { getProducts, getCategories, getTags } from './services/api';
+import ProductsPage from './pages/ProductsPage';
 
 function App() {
   const [products, setProducts] = useState([]);
@@ -45,7 +46,7 @@ function App() {
 
       <section>
         <h2>Products</h2>
-
+         <ProductsPage />;
         {products.length === 0 ? (
           <p>No products found.</p>
         ) : (
