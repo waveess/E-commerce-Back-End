@@ -5,6 +5,11 @@ import ProductList from '../components/products/ProductList';
 
 import useProducts from '../hooks/useProducts';
 
+import CategoryForm from '../components/categories/CategoryForm';
+import CategoryList from '../components/categories/CategoryList';
+
+import useCategories from '../hooks/useCategories';
+
 import '../styles/ProductsPage.css';
 
 export default function ProductsPage() {
@@ -27,6 +32,8 @@ export default function ProductsPage() {
       await addProduct(data);
     }
   };
+
+  
 
   return (
     <div className="products-page">
