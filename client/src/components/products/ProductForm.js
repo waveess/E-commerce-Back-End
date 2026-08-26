@@ -1,17 +1,24 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import '../../styles/ProductForm.css';
 
+const emptyProduct = {
+  product_name: '',
+  price: '',
+  stock: '',
+  category_id: '',
+};
+
 export default function ProductForm({
-  initialData = {
-    product_name: '',
-    price: '',
-    stock: '',
-    category_id: '',
-  },
+  initialData = emptyProduct,
+  categories = [],
   onSubmit,
   submitLabel = 'Save Product',
 }) {
   const [formData, setFormData] = useState(initialData);
+
+  useEffect(() => {
+    setFormData(initialData || emptyProduct);
+  }, [initialData]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -47,6 +54,7 @@ export default function ProductForm({
         name="price"
         type="number"
         step="0.01"
+        min="0"
         placeholder="Price"
         value={formData.price}
         onChange={handleChange}
@@ -56,21 +64,30 @@ export default function ProductForm({
       <input
         name="stock"
         type="number"
+        min="0"
         placeholder="Stock"
         value={formData.stock}
         onChange={handleChange}
         required
       />
 
-      <input
-        name="category_id"
-        type="number"
-        placeholder="Category ID"
-        value={formData.category_id}
-        onChange={handleChange}
-        required
-      />
+<select
+  id="category_id"
+  name="category_id"
+  value={formData.category_id}
+  onChange={handleChange}
+  required
+>
+  <option value="" disabled>
+    Select a category
+  </option>
 
+  {categories.map((category) => (
+    <option key={category.id} value={category.id}>
+      {category.category_name}
+    </option>
+  ))}
+</select>
       <button type="submit">
         {submitLabel}
       </button>

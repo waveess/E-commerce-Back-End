@@ -10,6 +10,7 @@ import '../styles/ProductsPage.css';
 export default function ProductsPage() {
   const {
     products,
+    categories,
     addProduct,
     editProduct,
     removeProduct,
@@ -35,6 +36,7 @@ export default function ProductsPage() {
         initialData={
           editingProduct || undefined
         }
+        categories={categories}
         onSubmit={handleSubmit}
         submitLabel={
           editingProduct
